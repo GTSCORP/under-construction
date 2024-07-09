@@ -183,6 +183,7 @@ body {
     right: 67%;
     height: 50%;
     z-index: 11;
+    /*backdrop-filter: jj;*/
 }
 
 .skyscrappers__list .skyscrapper-5::after {
