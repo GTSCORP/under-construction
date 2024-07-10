@@ -1,4 +1,5 @@
 import './App.css'
+import Typewriter from 'typewriter-effect';
 
 function App() {
 
@@ -6,12 +7,44 @@ function App() {
         <main>
 
             <section className="advice">
-                <img src="/logogrande.svg" alt="logo GTS" width="300px"/>
-                <h1 className="advice__title">Nuestro sitio web estará disponible pronto.</h1>
-                <p className="advice__description">
-                    <span>&lt;</span> En Construcción <span>/&gt;</span> Por favor, vuelve pronto
-                </p>
+                <div className="icon-container">
+                    <img className="logo-icon" src="/ONLYICON.svg" alt="logo GTS"/>
+                    <img className="logo-name" src="/ONLYNAME.svg" alt="logo GTS"/>
 
+
+                </div>
+                <h1 className="advice__title">Nuestro sitio web estará disponible pronto.</h1>
+
+
+                <div className="sub-title-container">
+                    <Typewriter
+                        options={{
+                            loop: true,
+                            cursor: '',
+
+                        }}
+                        onInit={(typewriter) => {
+                            typewriter.typeString(
+                                '<strong>Estamos trabajando en algo increíble.</strong>'
+                            )
+                                .pauseFor(200)
+                                .deleteAll()
+                                .typeString(
+                                    '<strong>¡Volveremos pronto!</strong>'
+                                )
+                                .pauseFor(200)
+                                .deleteAll()
+                                .typeString(
+                                    '<strong>Gracias por tu paciencia.</strong>'
+                                )
+                                .changeDeleteSpeed(1)
+                                .pauseFor(200)
+                                .deleteAll()
+                                .start();
+
+                        }}
+                    />
+                </div>
 
             </section>
             <section className="city-stuff">

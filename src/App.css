@@ -320,10 +320,50 @@ body {
     transform: scale(0.75) scaleX(-1);
 }
 
+.logo-name {
+    width: 300px;
+}
+
+.logo-icon {
+    width: 100px;
+    animation: breathe 4s infinite linear;
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 @media screen and (max-width: 900px) {
     .crane-2 {
         display: none;
     }
+}
+
+strong {
+
+    color: rgba(75, 175, 172, 1);
+    font-size: 50px;
+}
+.sub-title-container {
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .crane-2 .crane-cable-3 {
